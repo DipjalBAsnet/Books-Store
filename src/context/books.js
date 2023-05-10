@@ -12,7 +12,7 @@ export const Provider = ({ children }) => {
     setBooks(response.data);
   };
 
-  const editBookbyId = async (id, newTitle) => {
+  const editBookById = async (id, newTitle) => {
     const response = await axios.put(`http://localhost:3001/books/${id}`, {
       title: newTitle,
     });
@@ -48,7 +48,7 @@ export const Provider = ({ children }) => {
   const valueToShare = {
     books,
     deleteBookById,
-    editBookbyId,
+    editBookById,
     createBook,
     fetchBooks,
   };
